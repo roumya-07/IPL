@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Add.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar! -->
+    <div class="navbar">
+        <a href="Search.html"><i class="fa fa-fw fa-search">Search</i> </a>
+        <a href="Add.html"><i class="fa fa-fw fa-plus">Player</i> </a>
+        <a href="Contact.html"><i class="fa fa-fw fa-envelope">Contact</i> </a>
+        <a class="active" href="Index.html"><i class="fa fa-fw fa-home">Home</i> </a>
+    </div>
+    <div id="formDiv">
+        <form id="playersForm">
+            <h1>Local Storage</h1>
+            <label for="name"></label>
+            <input type="text" id="playername" placeholder="Player Name" required autofocus><br>
+            <label for="name"></label>
+            <input type="text" id="team" placeholder="Team" required><br>
+            <label for="name"></label>
+            <input type="text" id="status" placeholder="Status" required><br>
+            <label for="Price"></label>
+            <input type="text" id="Price" placeholder="Price" required><br>
+            <label for="description"></label>
+            <input type="text" id="description" placeholder="Description" required><br>
+            <label for="key"></label>
+            <input type="text" id="key" placeholder="Short Name" required><br>
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+        <label for="retrieveKey"></label>
+        <input type="text" id="retrieveKey" placeholder="Short Name" required><br>
+        <button id="retrieveButton">Retrieve records</button>
+        <br>
+        <div id="retrieve"></div>
+        <br>
+        <label for="removeKey"> </label>
+        <input type="text" id="removeKey" placeholder="Short Name" required><br>
+        <button id="removeButton">Remove record</button>
+        <br><br>
+        <button id="clearButton">Clear all records</button>
+    </div>
+    <script>
+        function store() { //stores items in the localStorage
+            var name = document.getElementById('playername').value;
+            var team = document.getElementById('team').value;
+            var status = document.getElementById('status').value;
+            var price = document.getElementById('Price').value;
+            var description = document.getElementById('description').value;
+            var key = document.getElementById('key').value;
+
+            const car = {
+                name: name,
+                team: team,
+                status: status,
+                price: price,
+                description: description,
+            }
+
+            window.localStorage.setItem(key, JSON.stringify(car));
+            //converting object to string
+        }
+
+        function retrieveRecords() { //retrieves items in the localStorage
+            var key = document.getElementById('retrieveKey').value; //gets key from user
+            console.log("retrive records");
+            var records = window.localStorage.getItem(key); //searches for the key in localStorage
+            var paragraph = document.createElement("p");
+            var infor = document.createTextNode(records);
+            paragraph.appendChild(infor);
+            var element = document.getElementById("retrieve");
+            element.appendChild(paragraph);
+        }
+
+        function removeItem() { //deletes item from localStorage
+            var key = document.getElementById('removeKey').value; //gets key from user
+            localStorage.removeItem(key) //passes key to the removeItem method
+            console.log("remove items");
+        }
+
+        function clearStorage() { //clears the entire localStorage
+            localStorage.clear()
+            console.log("clear records");
+        }
+
+        window.onload = function () { //ensures the page is loaded before functions are executed.
+            document.getElementById("playersForm").onsubmit = store
+            document.getElementById("clearButton").onclick = clearStorage
+            document.getElementById("removeButton").onclick = removeItem
+            document.getElementById("retrieveButton").onclick = retrieveRecords
+        }
+
+    </script>
+</body>
+
+</html>

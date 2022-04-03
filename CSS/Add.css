@@ -1,0 +1,70 @@
+body {
+  background-image: linear-gradient(to bottom right,
+      rgb(231, 199, 169),
+      rgb(156, 172, 216));
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 15px;
+}
+
+div {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#retrieve{
+    border: none;
+    margin: 20px;
+}
+
+button{
+    background-color: antiquewhite;
+    padding: 5px;
+}
+
+.navbar {
+  width: 100%;
+  overflow: auto;
+  background-image: linear-gradient(to bottom right,
+      rgb(231, 199, 169),
+      rgb(156, 172, 216));
+
+}
+
+.navbar a {
+  float: right;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 50px;
+  padding-left: 20px;
+  color: orangered;
+  font-size: 20 px
+}
+
+
+.navbar a:hover {
+  background-image: linear-gradient(to bottom right,
+      rgb(231, 199, 169),
+      rgb(156, 172, 216));
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+

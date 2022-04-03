@@ -1,0 +1,34 @@
+#searchbar {
+    margin-left: 25%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30PX;
+    background-image: linear-gradient(to bottom right,
+      rgb(231, 199, 169),
+      rgb(156, 172, 216));
+}
+
+input[type=text] {
+    width: 50%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+       change its width to 100% */
+input[type=text]:focus {
+    width: 50%;
+}
+
+#SB {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.SL {
+    padding: 16px;
+    margin-top: 16px;
+    text-align: center;
+}

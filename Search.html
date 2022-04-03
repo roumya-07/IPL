@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="CSS/Search.css">
+    <link rel="stylesheet" href="CSS/Index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar! -->
+    <div class="navbar">
+        <a href="Search.html"><i class="fa fa-fw fa-search">Search</i> </a>
+        <a href="Add.html"><i class="fa fa-fw fa-plus">Player</i> </a>
+        <a href="Contact.html"><i class="fa fa-fw fa-envelope">Contact</i> </a>
+        <a class="active" href="Index.html"><i class="fa fa-fw fa-home">Home</i> </a>
+    </div>
+    <p class="text-center">Indian Premier League 2022</p>
+
+    <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Search...">
+
+    <div id='SB'>
+        <div class="SL"><a href="CSK_ALL.html"><img src="CSS/IMG/CSK/CSK_LOGO.png" alt="" width="60%"></a></div>
+        <div class="SL"><a href="DC_ALL.html"><img src="CSS/IMG/DC/DC_LOGO.png" alt="" width="60%"></a></div>
+        <div class="SL"><a href="GT_ALL.html"><img src="CSS/IMG/GT/GT_LOGO.png" alt="" width="60%"></a></div>
+        <div class="SL"><a href="KKR_ALL.html"><img src="CSS/IMG/KKR/KKR_LOGO.png" alt="" width="40%"></a></div>
+        <div class="SL"><a href="LSG_ALL.html"><img src="CSS/IMG/LSG/LSG_LOGO.png" alt="" width="70%"></a></div>
+        <div class="SL"><a href="MI_ALL.html"><img src="CSS/IMG/MI/MI_LOGO.png" alt="" width="60%"></a></div>
+        <div class="SL"><a href="PK_ALL.html"><img src="CSS/IMG/PK/PK_LOGO.png" alt="" width="60%"></a></div>
+        <div class="SL"><a href="RR_ALL.html"><img src="CSS/IMG/RR/RR_LOGO.png" alt="" width="60%"></a></div>
+        <div class="SL"><a href="RCB_ALL.html"><img src="CSS/IMG/RCB/RCB_LOGO.png" alt="" width="45%"></a></div>
+        <div class="SL"><a href="SH_ALL.html"><img src="CSS/IMG/SH/SH_LOGO.png" alt="" width="80%"></a></div>
+    </div>
+
+</body>
+
+<script>
+    function search() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName('SL');
+
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display = "none";
+            }
+            else {
+                x[i].style.display = "list-item";
+            }
+        }
+    }
+</script>
+
+</html>
