@@ -1,7 +1,8 @@
 body {
   background-image: url('IMG/bg2.png');
-  background-size: 100%;
-  background-color: black;
+  background-size: cover;
+  background-color: rgb(231, 199, 169);
+  background-repeat: no-repeat;
   margin: 0;
 }
 
@@ -33,7 +34,11 @@ body {
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
-    display: block;
+    display: inline-block;
+  }
+  body{
+    float: none;
+    display: inline-block;
   }
 }
 

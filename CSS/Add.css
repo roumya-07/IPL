@@ -6,7 +6,9 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(231, 199, 169);
 }
+
 
 input[type=text], select {
   width: 80%;
@@ -62,9 +64,12 @@ button{
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
-    display: block;
+    display: inline-block;
+  }
+  body{
+    float: none;
+    display: inline-block;
   }
 }
-
 
 

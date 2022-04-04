@@ -1,3 +1,7 @@
+body{
+    background-repeat: no-repeat;
+    background-color: rgb(231, 199, 169);
+}
 #searchbar {
     margin-left: 25%;
     padding: 20px;
@@ -28,7 +32,12 @@ input[type=text]:focus {
 }
 
 .SL {
-    padding: 16px;
-    margin-top: 16px;
     text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+      float: none;
+      display: inline-block;
+    }
 }

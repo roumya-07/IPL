@@ -1,7 +1,8 @@
 body {
-  background-color: white;
+  background-color: rgb(231, 199, 169);
   background-image: url('IMG/s3.png');
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   margin: 0;
 }
@@ -34,8 +35,17 @@ body {
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
-    display: block;
+    display: inline-block;
   }
+  body{
+    float: none;
+    display: inline-block;
+  }
+  .all{
+    float: none;
+    display: inline-block;
+  }
+  
 }
 
 
